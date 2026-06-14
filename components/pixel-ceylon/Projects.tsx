@@ -2,23 +2,27 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
 const projects = [
   {
     num: '01',
+    slug: 'meshaun-journeys',
     name: 'Meshaun Journeys',
     type: 'Tourism & Hospitality · Sri Lanka',
     tags: ['Web Design', 'UI/UX', 'Development'],
   },
   {
     num: '02',
+    slug: 'gosberton-house',
     name: 'Gosberton House',
     type: 'Care & Healthcare · United Kingdom',
     tags: ['Web Design', 'Branding', 'SEO'],
   },
   {
     num: '03',
+    slug: 'red-state-invest',
     name: 'Red State Invest',
     type: 'Investment & Finance · Sri Lanka',
     tags: ['Development', 'Content', 'Branding'],
@@ -35,34 +39,38 @@ function ProjectRow({ p, index }: { p: typeof projects[number]; index: number })
       initial={{ opacity: 0, x: -20 }}
       animate={inView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.55, delay: index * 0.1, ease: 'easeOut' }}
-      className="group grid grid-cols-[60px_1fr] md:grid-cols-[60px_1fr_auto_auto] items-center gap-4 md:gap-8 px-6 md:px-8 py-6 bg-[#0F1117] border border-[#1E2130] rounded-xl hover:bg-[#181B25] hover:border-[#C8FF00]/15 transition-all duration-300 cursor-pointer"
     >
-      <div className="font-['Space_Mono'] text-[12px] text-[#7E8190]">{p.num}</div>
+      <Link
+        href={`/work/${p.slug}`}
+        className="group grid grid-cols-[60px_1fr] md:grid-cols-[60px_1fr_auto_auto] items-center gap-4 md:gap-8 px-6 md:px-8 py-6 bg-[#0F1117] border border-[#1E2130] rounded-xl hover:bg-[#181B25] hover:border-[#C8FF00]/15 transition-all duration-300 block"
+      >
+        <div className="font-['Space_Mono'] text-[12px] text-[#7E8190]">{p.num}</div>
 
-      <div>
-        <div className="text-lg font-bold text-white group-hover:text-[#C8FF00] transition-colors duration-200">
-          {p.name}
+        <div>
+          <div className="text-lg font-bold text-white group-hover:text-[#C8FF00] transition-colors duration-200">
+            {p.name}
+          </div>
+          <div className="text-[13px] text-[#7E8190] mt-0.5">{p.type}</div>
         </div>
-        <div className="text-[13px] text-[#7E8190] mt-0.5">{p.type}</div>
-      </div>
 
-      <div className="hidden md:flex gap-2 flex-wrap">
-        {p.tags.map((t) => (
-          <span
-            key={t}
-            className="bg-[#181B25] border border-[#1E2130] rounded-full text-[11px] px-3 py-1 text-[#7E8190]"
-          >
-            {t}
-          </span>
-        ))}
-      </div>
-
-      <div className="hidden md:flex items-center gap-2 text-[13px] font-semibold text-[#C8FF00]">
-        View Case Study
-        <div className="w-9 h-9 rounded-full border border-[#C8FF00]/30 flex items-center justify-center group-hover:bg-[#C8FF00] group-hover:border-[#C8FF00] transition-all duration-200">
-          <ArrowUpRight className="w-4 h-4 group-hover:text-black text-[#C8FF00] transition-colors duration-200" />
+        <div className="hidden md:flex gap-2 flex-wrap">
+          {p.tags.map((t) => (
+            <span
+              key={t}
+              className="bg-[#181B25] border border-[#1E2130] rounded-full text-[11px] px-3 py-1 text-[#7E8190]"
+            >
+              {t}
+            </span>
+          ))}
         </div>
-      </div>
+
+        <div className="hidden md:flex items-center gap-2 text-[13px] font-semibold text-[#C8FF00]">
+          View Case Study
+          <div className="w-9 h-9 rounded-full border border-[#C8FF00]/30 flex items-center justify-center group-hover:bg-[#C8FF00] group-hover:border-[#C8FF00] transition-all duration-200">
+            <ArrowUpRight className="w-4 h-4 group-hover:text-black text-[#C8FF00] transition-colors duration-200" />
+          </div>
+        </div>
+      </Link>
     </motion.div>
   );
 }
