@@ -1,5 +1,3 @@
-// Allow importing global CSS without explicit type declarations
-// @ts-ignore: CSS module side-effect import
 import './globals.css';
 import type { Metadata } from 'next';
 import { Bebas_Neue, Manrope, Space_Mono } from 'next/font/google';
