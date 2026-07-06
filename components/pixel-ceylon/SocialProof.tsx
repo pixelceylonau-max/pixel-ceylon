@@ -4,10 +4,10 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 const clients = [
-  { icon: '🏟️', name: 'Client A', platform: 'Instagram · Business', count: '64K+', label: 'Followers grown' },
-  { icon: '🎵', name: 'Client B', platform: 'Facebook · Entertainment', count: '26K+', label: 'Followers grown' },
-  { icon: '🌿', name: 'Client C', platform: 'Instagram · Lifestyle', count: '3.8K+', label: 'Followers grown' },
-  { icon: '🏡', name: 'Client D', platform: 'Facebook · Real Estate', count: '14K+', label: 'Followers grown' },
+  { icon: '🏟️', name: 'STRIDE', platform: 'Facebook', count: '64K+', label: 'Followers grown' },
+  { icon: '🎵', name: 'Superway Tours', platform: 'Facebook', count: '26K+', label: 'Followers grown' },
+  { icon: '🌿', name: 'ABEC Premier', platform: 'Facebook', count: '3.8K+', label: 'Followers grown' },
+  { icon: '🏡', name: 'PhotoBooth', platform: 'Facebook', count: '14K+', label: 'Followers grown' },
 ];
 
 export default function SocialProof() {
