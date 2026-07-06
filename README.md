@@ -36,8 +36,8 @@ A modern Next.js landing page for Pixel Ceylon — a Sri Lankan digital agency f
 Create a `.env.local` file with the following values:
 
 ```env
-NEXT_PUBLIC_SUPABASE_URL=https://pdzudppodzdicdtkiigy.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=sb_publishable_vPk_mx9Fk9saeYgD3wpciA_Q4cU8aH6
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
 ```
 
 ## Local developmentgit
