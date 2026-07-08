@@ -5,7 +5,7 @@ import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone, MapPin } from 'luc
 const quickLinks = [
   { label: 'Services', href: '#services' },
   { label: 'Results', href: '#stats' },
-  { label: 'Work', href: '#work' },
+  { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -128,12 +128,12 @@ export default function Footer() {
                 className="flex items-center gap-2 hover:text-white transition-colors"
               >
                 <Mail className="w-4 h-4 text-[#b5e409]" />
-                hello@pixelceylon.com
+                sayhi@pixelceylon.com.au
               </a>
               <div className="hidden sm:block w-1 h-1 rounded-full bg-[#3A3D4A]" />
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-[#b5e409]" />
-                <span>Colombo, Sri Lanka</span>
+                <span>Melbourne, Australia</span>
               </div>
             </div>
           </div>
