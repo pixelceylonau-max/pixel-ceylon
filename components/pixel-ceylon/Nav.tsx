@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 const links = [
   { label: 'Services', href: '#services' },
@@ -43,10 +44,16 @@ export default function Nav() {
       >
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-4 flex items-center justify-between gap-8">
           {/* Logo */}
-          <a href="#home" className="font-['Bebas_Neue'] text-2xl tracking-widest text-white shrink-0">
-            <span className="text-[#60A5FA]">PIXEL</span> <span className="text-[#b5e409]">CEYLON</span>
+          <a href="#home" className="shrink-0">
+            <Image
+              src="/white.svg"
+              alt="Pixel Ceylon"
+              width={120}
+              height={60}
+              className="h-20 w-40"
+              priority
+            />
           </a>
-
           {/* Desktop links */}
           <ul className="hidden md:flex items-center gap-8 list-none">
             {links.map((l) => (

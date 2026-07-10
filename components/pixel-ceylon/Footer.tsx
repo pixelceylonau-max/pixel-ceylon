@@ -1,6 +1,7 @@
 'use client';
 
 import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import Image from 'next/image';
 
 const quickLinks = [
   { label: 'Services', href: '#services' },
@@ -84,10 +85,14 @@ export default function Footer() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           {/* Main footer content */}
           <div className="flex flex-col items-center text-center mb-14">
-            {/* Logo */}
-            <div className="font-['Bebas_Neue'] text-[28px] tracking-[0.2em] text-white mb-4">
-              <span className="text-[#60A5FA]">PIXEL</span> <span className="text-[#b5e409]">CEYLON</span>
-            </div>
+             {/* Logo */}
+            <Image
+              src="/black.svg"
+              alt="Pixel Ceylon"
+              width={200}
+              height={100}
+              className="h-30 w-35 mb-4"
+            />
 
             {/* Tagline */}
             <p className="text-sm text-[#7E8190] tracking-wide max-w-[320px] mb-8">
