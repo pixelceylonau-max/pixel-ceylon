@@ -2,6 +2,7 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { Users, Clock, Globe, ChartBar as BarChart3, Bot } from 'lucide-react';
 
 function StatCard({
   children,
@@ -76,8 +77,8 @@ export default function Stats() {
             Why Clients <span className="text-[#b5e409]">Trust Us</span>
           </h2>
         </motion.div>
-        
-         {/* Pixel deco */}
+
+        {/* Pixel deco */}
       <div className="absolute top-16 right-16 opacity-[0.50] pointer-events-none hidden lg:block">
         <svg width="180" height="180" viewBox="0 0 200 200">
           {[[0,0],[16,16],[32,0],[48,32],[0,48],[64,16],[80,48],[16,64],[96,0]].map(([x,y],i) => (
@@ -90,7 +91,10 @@ export default function Stats() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {/* Happy clients */}
           <StatCard delay={0}>
-            <p className="text-[11px] font-semibold text-[#6B7280] uppercase tracking-[0.1em] mb-3">Happy Clients</p>
+            <div className="flex items-center justify-between mb-3">
+              <p className="text-[11px] font-semibold text-[#6B7280] uppercase tracking-[0.1em]">Happy Clients</p>
+              <Users className="w-4 h-4 text-[#9CA3AF]" strokeWidth={1.5} />
+            </div>
             <div
               className="font-['Bebas_Neue'] leading-none text-[#0A0A0A]"
               style={{ fontSize: 64 }}
@@ -105,17 +109,25 @@ export default function Stats() {
 
           {/* Delivery time */}
           <StatCard delay={0.08}>
-            <p className="text-[11px] font-semibold text-[#6B7280] uppercase tracking-[0.1em] mb-3">Avg. Delivery Time</p>
-            <div className="font-['Bebas_Neue'] leading-tight text-[#0A0A0A]" style={{ fontSize: 44 }}>
-              2–3<br />
-              <span className="text-[#b5e409]" style={{ fontSize: 28 }}>Weeks</span>
+            <div className="flex items-center justify-between mb-3">
+              <p className="text-[11px] font-semibold text-[#6B7280] uppercase tracking-[0.1em]">Avg. Delivery Time</p>
+              <Clock className="w-4 h-4 text-[#9CA3AF]" strokeWidth={1.5} />
             </div>
+            <div
+              className="font-['Bebas_Neue'] leading-none text-[#0A0A0A]"
+              style={{ fontSize: 64 }}
+            >
+              <span className="text-[#b5e409]">2-3</span>weeks
+              </div>
             <p className="text-sm text-[#6B7280] mt-2">Fastest turnaround in the region</p>
           </StatCard>
 
           {/* Countries */}
           <StatCard delay={0.16}>
-            <p className="text-[11px] font-semibold text-[#6B7280] uppercase tracking-[0.1em] mb-3">Countries Served</p>
+            <div className="flex items-center justify-between mb-3">
+              <p className="text-[11px] font-semibold text-[#6B7280] uppercase tracking-[0.1em]">Countries Served</p>
+              <Globe className="w-4 h-4 text-[#9CA3AF]" strokeWidth={1.5} />
+            </div>
             <div className="font-['Bebas_Neue'] leading-none text-[#0A0A0A]" style={{ fontSize: 64 }}>
               <span className="text-[#b5e409]">4</span>+
             </div>
@@ -127,7 +139,10 @@ export default function Stats() {
 
           {/* Web designs — spans 2 cols */}
           <StatCard delay={0.24} className="sm:col-span-2">
-            <p className="text-[11px] font-semibold text-[#6B7280] uppercase tracking-[0.1em] mb-3">Web Designs Shipped</p>
+            <div className="flex items-center justify-between mb-3">
+              <p className="text-[11px] font-semibold text-[#6B7280] uppercase tracking-[0.1em]">Web Designs Shipped</p>
+              <BarChart3 className="w-4 h-4 text-[#9CA3AF]" strokeWidth={1.5} />
+            </div>
             <div className="flex items-end gap-5">
               <div className="font-['Bebas_Neue'] leading-none text-[#0A0A0A]" style={{ fontSize: 64 }}>
                 <span className="text-[#b5e409]">30</span>+
@@ -148,8 +163,11 @@ export default function Stats() {
 
           {/* AI Automation */}
           <StatCard delay={0.32} className="bg-[#b5e409]/[0.08] border-[#b5e409]/30">
-            <p className="text-[11px] font-semibold text-[#6B7280] uppercase tracking-[0.1em] mb-3">AI Automation</p>
-            <div className="font-['Bebas_Neue'] text-[28px] text-[#0A0A0A] my-2">ACTIVE</div>
+            <div className="flex items-center justify-between mb-3">
+              <p className="text-[11px] font-semibold text-[#6B7280] uppercase tracking-[0.1em]">AI Automation</p>
+              <Bot className="w-4 h-4 text-[#9CA3AF]" strokeWidth={1.5} />
+            </div>
+            <div className="font-['Bebas_Neue'] text-[28px] text-[#b5e409] my-2">ACTIVE</div>
             <p className="text-sm text-[#6B7280]">Workflows &amp; agents built for efficiency</p>
             <div className="absolute top-6 right-6 w-2 h-2 rounded-full bg-[#b5e409] pulse-dot" />
           </StatCard>
