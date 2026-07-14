@@ -68,9 +68,11 @@ export default function Footer() {
                   boxShadow: '0 0 40px rgba(200, 255, 0, 0.08), inset 0 0 30px rgba(200, 255, 0, 0.03)',
                 }}
               >
-                <span className="font-['Bebas_Neue'] text-2xl md:text-3xl tracking-[0.15em] text-[#b5e409]">
-                  PC
-                </span>
+                  <img
+                  src="/Footer icon.png"
+                  alt="Pixel Ceylon"
+                  className="w-20 h-20 object-contain"
+                />
               </div>
             </div>
           </div>
