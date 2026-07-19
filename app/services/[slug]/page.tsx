@@ -20,11 +20,7 @@ type Service = {
 
 async function getService(slug: string): Promise<Service | null> {
   try {
-    const { data, error } = await supabase
-      .from('services')
-      .select('*')
-      .eq('slug', slug)
-      .maybeSingle();
+    const { data, error } = await supabase.from('services').select('*').eq('slug', slug).maybeSingle();
 
     if (error) {
       console.error('Error fetching service:', error.message, error.details, error.hint);
@@ -89,9 +85,7 @@ export default async function ServicePage({ params }: { params: { slug: string }
 
   return (
     <>
-      {/* Structured Data for SEO */}
       <StructuredData data={structuredData} id="service-page-structured-data" />
-
       <ServiceDetail service={service} />
     </>
   );

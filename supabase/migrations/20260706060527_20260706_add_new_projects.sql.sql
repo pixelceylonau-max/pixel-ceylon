@@ -57,7 +57,7 @@ INSERT INTO projects (slug, name, client_type, tags, summary, description, featu
   'Official website for Sri Lanka''s leading international education consultancy.',
   'Developed the official website for ABEC, one of Sri Lanka''s leading international education consultancies. The website presents study-abroad services, university partnerships, student success stories, and educational guidance in a professional and accessible format.',
   '["Study abroad services", "University partnerships showcase", "Student success stories", "Professional design", "Accessible content structure"]'::jsonb,
-  'https://images.unsplash.com/photo-1523050854058-8df90110c9f9?w=1200&h=800&fit=crop',
+  '/images/ABEC.webp',
   'https://abec.lk',
   8
 );

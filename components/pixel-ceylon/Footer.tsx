@@ -98,7 +98,7 @@ export default function Footer() {
 
             {/* Tagline */}
             <p className="text-sm text-[#7E8190] tracking-wide max-w-[320px] mb-8">
-              Crafting digital experiences that drive growth.
+              Designed to Inspire. Engineered to Perform.
             </p>
 
             {/* Quick Links */}
@@ -141,6 +141,11 @@ export default function Footer() {
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-[#b5e409]" />
                 <span>Melbourne, Australia</span>
+              </div>
+              <div className="hidden sm:block w-1 h-1 rounded-full bg-[#3A3D4A]" />
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-[#b5e409]" />
+                <span>Colombo, Sri Lanka</span>
               </div>
             </div>
           </div>
